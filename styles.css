@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0 40px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1E1E1E;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+/* Add hover effect */
+.logo-link:hover {
+    opacity: 0.9;
+}
+.stylish-heading {
+    font-size: 1rem;  /* Adjust for better prominence */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease-in-out, letter-spacing 0.2s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 250;  /* Light weight to match the logo */
+    letter-spacing: 0.3em;
+    margin-left: 0.2em;
+}
+.tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.45rem;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: -1em;
+    text-align: center;
+    width: 100%;
+}
+.stylish-heading:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+    letter-spacing: 0.35em; /* Slightly expand letter spacing */
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.start-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+main {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+.cta-btn {
+    background-color: #0A84FF;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.subtext {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #BBBBBB;
+}
+.demo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.demo-text {
+    flex: 1;
+    text-align: left;
+}
+
+.demo-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.demo-video video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1E1E1E;
+}
