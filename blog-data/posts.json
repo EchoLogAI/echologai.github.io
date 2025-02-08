@@ -1,16 +1,9 @@
 [
     {
-        "title": "Better and Cost-Effective Alternative to AWS SageMaker: EchoLog",
-        "date": "Feb 7, 2025",
+        "title": "Enhancing Digital Accessibility: The Vision Behind EchoLog",
+        "date": "February 7, 2025",
         "image": "assets/blog-images/blog1.jpg",
-        "excerpt": "Learn how EchoLog provides a cost-effective solution to AWS SageMaker for voice-controlled computing.",
+        "excerpt": "How EchoLog is revolutionizing accessibility for individuals with disabilities by enabling seamless computer navigation through voice commands.",
         "url": "post1.html"
-    },
-    {
-        "title": "Why Do GPU Containers Have Long Cold Starts?",
-        "date": "Jan 25, 2025",
-        "image": "assets/blog-images/blog2.jpg",
-        "excerpt": "Exploring why GPU containers experience cold start delays and how to optimize them.",
-        "url": "post2.html"
     }
 ]
