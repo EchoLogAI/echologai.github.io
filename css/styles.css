@@ -11,8 +11,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #1E1E1E;
+    padding: 0.5em;
+    background-color: #121212;
 }
 .logo {
     display: flex;
@@ -130,7 +130,12 @@ h1 {
 
 
 footer {
-    margin-top: 50px;
-    padding: 20px;
+    /* margin-top: 0.5em; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0px;
     background-color: #1E1E1E;
+    text-align: center;
+    color: white;
 }
