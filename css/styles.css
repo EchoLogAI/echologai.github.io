@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0 40px;
     text-align: center;
+    /* padding-bottom: 80px; */
 }
 
 header {
@@ -132,10 +133,12 @@ h1 {
 footer {
     /* margin-top: 0.5em; */
     position: fixed;
+    left: 0;
+    z-index: 10;
     bottom: 0;
     width: 100%;
     padding: 0px;
-    background-color: #1E1E1E;
+    background-color: #121212;
     text-align: center;
     color: white;
 }
