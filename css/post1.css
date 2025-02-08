@@ -1,0 +1,77 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.blog-post-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Keep the header centered */
+.blog-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-category {
+    background-color: #6beeff;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.blog-header h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.blog-meta {
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+/* Ensure blog content is left-aligned */
+.blog-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto; /* Keep content aligned within the main container */
+    line-height: 1.6;
+}
+
+
+/* Ensure images are also left-aligned */
+.blog-image {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.blog-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Style for subheadings */
+.blog-content h2 {
+    color: #6beeff;
+    margin-top: 20px;
+}
+
+/* Style for bullet points */
+.blog-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-content ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
