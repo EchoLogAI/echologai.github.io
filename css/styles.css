@@ -1,116 +1,137 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
     color: white;
     margin: 0;
-    padding: 0 2.5em;
+    padding: 0;
     text-align: center;
-    /* padding-bottom: 80px; */
+    background: linear-gradient(to top, #00133f, #00105d, #00a2ff);
+    background-size: cover; /* Ensures the gradient covers the entire viewport */
+    background-attachment: fixed; /* Makes sure the background doesn't scroll with the page */
+    font-size: 1rem; /* Root font size for better scaling */
 }
 
+
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em;
-    background-color: #121212;
+    padding: 0.5em 2em;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: #00126f; Dark blue for EchoLog theme */
 }
+
+/* Logo Section */
 .logo {
     display: flex;
     align-items: center;
 }
+
 .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 3em;
+    margin-right: 1.6em;
 }
+
 .logo-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
 }
+
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: inherit;
 }
-/* Add hover effect */
+
+/* Hover Effects */
 .logo-link:hover {
     opacity: 0.9;
 }
+
 .stylish-heading {
-    font-size: 1rem;  /* Adjust for better prominence */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+    font-size: 1.6em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out, letter-spacing 0.2s ease-in-out;
     font-family: 'Roboto', sans-serif;
-    font-weight: 250;  /* Light weight to match the logo */
-    letter-spacing: 0.3em;
+    font-weight: 500; /* Light weight for the logo */
+    letter-spacing: 0.2em;
     margin-left: 0.2em;
+    color: black;
 }
+
 .tagline {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.45rem;
+    font-size: 0.6em;
     font-weight: 100;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-top: -1em;
+    margin-top: -0.5em;
     text-align: center;
     width: 100%;
+    color: black;
 }
+
 .stylish-heading:hover {
     transform: scale(1.05); /* Subtle zoom on hover */
-    letter-spacing: 0.35em; /* Slightly expand letter spacing */
+    letter-spacing: 0.25em; /* Slightly expand letter spacing */
 }
+
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 2em;
 }
+
 nav a {
     color: white;
     text-decoration: none;
 }
 
-.start-btn {
-    background-color: green;
+nav a:hover {
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+/* Call-to-action Button */
+.cta-btn {
+    background-color: #004891;
     color: white;
-    padding: 10px 15px;
+    padding: 1em 2em;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    /* transition: transform 0.3s ease; */
 }
+
+/* .cta-btn:hover {
+    transform: scale(1.1); /* Increases button size to 110% on hover */
+/* } */ */
+
+/* Main Section */
 main {
-    margin-top: 50px;
+    margin-top: 3em;
 }
 
 h1 {
     font-size: 2.5em;
 }
-.cta-btn {
-    background-color: #004891;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2em;
-    margin-top: 20px;
-}
 
-.subtext {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #BBBBBB;
-}
+/* Demo Section */
 .demo-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1.9em;
-    /* margin-top: 2em; */
-    padding: 5em;
-    gap: 1.5em;
+    margin: 2em;
+    padding: 2em;
+    gap: 2em;
 }
 
 .demo-text {
@@ -126,20 +147,54 @@ h1 {
 
 .demo-video video {
     width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+    max-width: 30em; /* Using `em` for responsiveness */
+    border-radius: 1em;
 }
 
-
+/* Footer Styling */
 footer {
-    /* margin-top: 0.5em; */
     position: fixed;
     left: 0;
-    z-index: 10;
     bottom: 0;
     width: 100%;
-    padding: 0px;
-    background-color: #121212;
+    padding: 0.75em 0;  /* Reduce vertical padding */
     text-align: center;
     color: white;
+    background-color: #00133f;
+    height: 2em; /* Explicitly set height */
+    line-height: 2em; /* Center text vertically */
+    /* font-size: 0.9em; Adjust font size if needed */
+    overflow: hidden; /* Ensure no extra spacing */
+}
+
+/* Button Styles */
+.start-btn {
+    background-color: green;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3em;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-bottom: 1em;
+    }
+    
+    .demo-section {
+        flex-direction: column;
+        padding: 1.5em;
+    }
+    
+    .cta-btn {
+        width: 80%;
+    }
 }

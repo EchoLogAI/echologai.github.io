@@ -5,29 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EchoLog</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/post.css">
 </head>
 <body>
     <header>
         <div class="logo"> 
-            <!-- <a href="index.html">
-                <img src="EchoLog-Logo.png" alt="EchoLog Logo" style="border-radius:0.5em"/>
-            </a>
-            <div class="logo-text">
-                <h1 class="stylish-heading"><a href="index.html">EchoLog</a></h1>
-                <p class="tagline">TRANSFORMING ACCESSIBILITY</p>
-            </div> -->
             <a href="index.html" class="logo-link">
-                <img src="assets/EchoLog-Logo.png" alt="EchoLog Logo" style="border-radius:0.5em"/> 
+                <img src="assets/EchoLog-Logo.png" alt="EchoLog Logo" style="border-radius:1em; width: 4em; height: 4em;">
                 <div class="logo-text">
-                    <h1 class="stylish-heading">EchoLog</h1>
+                    <h1 class="stylish-heading">ECHOLOG</h1>
                     <p class="tagline">TRANSFORMING  ACCESSIBILITY</p>
                 </div>
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="blogs.html">Blogs</a></li>
-                <!-- <li><a href="#docs">How to Start</a></li> -->
+                <li><a href="#" id="blogs-btn">Blogs</a></li>
                 <li><a href="https://calendly.com/snehamaheshwari07/meeting-with-echolog-team" target="_blank">Contact Us</a></li>
             </ul>
         </nav>
@@ -36,8 +30,9 @@
     <main>
         <h1>Empowering Accessibility, One Command at a Time</h1>
         <p>We transforms voice commands into seamless computer navigation, empowering specially abled users with hands-free control.</p>
-        <button class="cta-btn">Try For Web →</button>
-        <!-- <p class="subtext">14-days free, no credit card required</p> -->
+        <a href="https://chromewebstore.google.com/search/EchoLog%20AI%20Voice%20Assistant" target="_blank">
+            <button class="cta-btn">Get Chrome Extension →</button>
+        </a>
     </main>
     <section class="demo-section">
         <div class="demo-text">
@@ -45,15 +40,18 @@
             <p>Watch our demo to see how EchoLog enables seamless voice-controlled computer navigation.</p>
         </div>
         <div class="demo-video">
-            <video controls>
-                <source src="public/assets/demo-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u4k68_HzLKM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
     
     <footer>
-        <p>Made by team EchoLog.</p>
+        <p style="margin-top: -0.12em;">
+            Made by team EchoLog.
+        </p>
     </footer>
+
+    <script src="blog-data/posts.js"></script>
+    <script src="scripts/blog.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
