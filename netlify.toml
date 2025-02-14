@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "https://echologai.github.io/:splat"
+  status = 301
+  force = true
