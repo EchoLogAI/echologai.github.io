@@ -3,67 +3,158 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to top, #00133f, #00105d, #00a2ff); /* Matches your main styles.css */
+    min-height: 100vh; /* Ensures full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 .blog-container {
-    max-width: 50rem;
+    max-width: 50rem; /* Keeps content readable */
     margin: 0 auto;
-    padding: 2rem;
+    padding: clamp(1rem, 3vw, 2rem); /* Fluid padding */
+    width: 90%; /* Ensures flexibility on smaller screens */
+    box-sizing: border-box; /* Includes padding in width */
 }
 
 .blog-post {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* gap: 1rem; */
-    padding: 1rem;
-    margin: 0 3rem 4rem 4rem;
+    padding: clamp(0.75rem, 2vw, 1rem); /* Fluid padding */
+    margin: 0 0 3rem 0; /* Simplified margin, removed redundant left/right */
     border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(255, 255, 255, 0.1);
-    margin-left: 15rem;
-    margin-right: 15rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.15); /* Slightly stronger shadow for depth */
+    background-color: rgba(0, 19, 63, 0.8); /* Subtle dark overlay for contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    margin-left: 15rem; /* Added margin to align with sidebar */
+    margin-right: 15rem; /* Added margin to align with sidebar */
+}
+
+/* Hover effect for interactivity */
+.blog-post:hover {
+    transform: translateY(-0.25rem); /* Slight lift */
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2); /* Enhanced shadow */
 }
 
 .blog-post img {
-    width: 6rem;
+    width: clamp(5rem, 15vw, 6rem); /* Fluid image width */
     height: auto;
     border-radius: 0.3rem;
     object-fit: cover;
+    margin-right: clamp(0.5rem, 2vw, 1rem); /* Fluid spacing */
+    transition: transform 0.3s ease; /* Smooth scaling */
+    margin-left: 1rem; /* Added margin for spacing */
+}
+
+/* Slight scale on image hover */
+.blog-post:hover img {
+    transform: scale(1.05);
 }
 
 .blog-content {
     flex: 1;
     text-align: left;
+    padding: 0.5rem; /* Inner padding for readability */
 }
 
 .blog-content h2 {
     color: #6beeff;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.25rem); /* Fluid font size */
+    line-height: 1.3; /* Better readability */
+    font-weight: 600; /* Slightly bolder */
 }
 
 .blog-content p {
-    color: #ccc;
-    margin-bottom: 0.5rem;
-    font-size: 0.75rem;
+    color: #e0e0e0; /* Lighter gray for better contrast */
+    margin-bottom: 0.75rem;
+    font-size: clamp(0.7rem, 2vw, 0.875rem); /* Fluid font size */
+    line-height: 1.5; /* Improved readability */
 }
 
 .blog-content a {
     color: #6beeff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-/* Responsive Design */
+.blog-content a:hover,
+.blog-content a:focus {
+    color: #00a2ff; /* Darker shade on hover/focus */
+    text-decoration: underline; /* Visual feedback */
+}
+
+/* Focus states for accessibility */
+.blog-content a:focus,
+.blog-post:focus-within {
+    outline: 2px solid #00a2ff;
+    outline-offset: 2px;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+    .blog-container {
+        width: 95%; /* Slightly wider on tablets */
+    }
+
+    .blog-post {
+        margin: 0 0 2rem 0; /* Reduced bottom margin */
+    }
+}
+
 @media (max-width: 768px) {
     .blog-post {
         flex-direction: column;
         align-items: flex-start;
-        margin: 0 1rem 1rem 1rem;
+        padding: 1rem;
+        margin: 0 0 1.5rem 0; /* Adjusted for smaller screens */
     }
 
     .blog-post img {
         width: 100%;
-        max-width: 12rem;
+        max-width: 15rem; /* Slightly larger max-width */
+        margin-right: 0;
+        margin-bottom: 1rem; /* Space below image */
+    }
+
+    .blog-content {
+        padding: 0; /* Remove extra padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-container {
+        padding: 1rem; /* Reduced padding */
+    }
+
+    .blog-post {
+        margin: 0 0 1rem 0; /* Tighter spacing */
+        box-shadow: 0 0.15rem 0.3rem rgba(255, 255, 255, 0.1); /* Lighter shadow */
+    }
+
+    .blog-content h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .blog-content p {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    .blog-post:hover,
+    .blog-post:hover img,
+    .blog-content a:hover {
+        transform: none; /* No scaling */
+        box-shadow: inherit; /* No shadow change */
+        color: inherit; /* No color change */
+        text-decoration: none; /* No underline */
     }
 }
