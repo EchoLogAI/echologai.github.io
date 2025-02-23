@@ -55,6 +55,8 @@ function fetchBlogPosts() {
         blogList.appendChild(blogItem);
     });
 
+    // in the end add empty div to create space between the blog posts and footer
+    blogList.innerHTML += `<div style="height: 4em;"></div>`;
     console.log("Blog posts loaded successfully!");
 }
 

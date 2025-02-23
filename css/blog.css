@@ -26,6 +26,8 @@ body {
     box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.15); /* Slightly stronger shadow for depth */
     background-color: rgba(0, 19, 63, 0.8); /* Subtle dark overlay for contrast */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    margin-left: 15rem; /* Added margin to align with sidebar */
+    margin-right: 15rem; /* Added margin to align with sidebar */
 }
 
 /* Hover effect for interactivity */
@@ -41,6 +43,7 @@ body {
     object-fit: cover;
     margin-right: clamp(0.5rem, 2vw, 1rem); /* Fluid spacing */
     transition: transform 0.3s ease; /* Smooth scaling */
+    margin-left: 1rem; /* Added margin for spacing */
 }
 
 /* Slight scale on image hover */
