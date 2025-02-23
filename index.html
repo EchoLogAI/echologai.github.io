@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/post.css">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="logo"> 
-            <a href="https://echologai.github.io" class="logo-link">
+            <a href="https://echologai.github.io" class="logo-link"aria-label="EchoLog Home">
                 <img src="assets/EchoLog-Logo.png" alt="EchoLog Logo" style="border-radius:1em; width: 4em; height: 4em;">
                 <div class="logo-text">
                     <h1 class="stylish-heading">ECHOLOG</h1>
@@ -19,34 +19,43 @@
                 </div>
             </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#" id="blogs-btn">Blogs</a></li>
-                <li><a href="https://calendly.com/snehamaheshwari07/meeting-with-echolog-team" target="_blank">Contact Us</a></li>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul role="list">
+                <li><a href="#" id="blogs-btn" aria-label="View EchoLog Blogs">Blogs</a></li>
+                <li><a href="https://calendly.com/snehamaheshwari07/meeting-with-echolog-team" target="_blank" aria-label="Contact EchoLog Team (opens in new tab)">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
+    <main role="main">
         <h1>Empowering Accessibility, One Command at a Time</h1>
-        <p>We transforms voice commands into seamless computer navigation, empowering specially abled users with hands-free control.</p>
-        <a href="https://chromewebstore.google.com/detail/echolog-ai-voice-assistan/helndcnfkippmpeljmdhakoieiidijcn" target="_blank">
+        <p>We transform voice commands into seamless computer navigation, empowering people with motor disabilities and visual impairments with hands-free control while enhancing convenience for everyone.</p>
+        <a href="https://chromewebstore.google.com/detail/echolog-ai-voice-assistan/helndcnfkippmpeljmdhakoieiidijcn" target="_blank" aria-label="Get EchoLog Chrome Extension (opens in new tab)">
             <button class="cta-btn">Get Chrome Extension →</button>
         </a>
     </main>
-    <section class="demo-section">
+    <section class="demo-section" aria-labelledby="demo-heading">
         <div class="demo-text">
             <h2>See EchoLog in Action</h2>
             <p>Watch our demo to see how EchoLog enables seamless voice-controlled computer navigation.</p>
         </div>
         <div class="demo-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/u4k68_HzLKM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/u4k68_HzLKM" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                title="EchoLog Demo Video"
+                aria-label="Demonstration video of EchoLog voice-controlled navigation">
+            </iframe>
         </div>
     </section>
     
-    <footer>
+    <footer role="contentinfo">
         <p style="margin-top: -0.12em;">
-            Made by team EchoLog.
+            © 2025 Echolog Team. All rights reserved.
         </p>
     </footer>
 

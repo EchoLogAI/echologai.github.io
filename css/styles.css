@@ -6,21 +6,22 @@ body {
     padding: 0;
     text-align: center;
     background: linear-gradient(to top, #00133f, #00105d, #00a2ff);
-    background-size: cover; /* Ensures the gradient covers the entire viewport */
-    background-attachment: fixed; /* Makes sure the background doesn't scroll with the page */
-    font-size: 1rem; /* Root font size for better scaling */
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 1rem;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
-
 
 /* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 2em;
+    padding: 1em 2em; /* Increased padding for touch targets */
     width: 100%;
     box-sizing: border-box;
-    /* background-color: #00126f; Dark blue for EchoLog theme */
+    transition: padding 0.3s ease; /* Smooth padding transition */
 }
 
 /* Logo Section */
@@ -31,7 +32,8 @@ header {
 
 .logo img {
     height: 3em;
-    margin-right: 1.6em;
+    margin-right: 1em; /* Reduced for smaller screens */
+    transition: height 0.3s ease; /* Smooth resize */
 }
 
 .logo-text {
@@ -48,17 +50,17 @@ header {
     color: inherit;
 }
 
-/* Hover Effects */
+/* Hover Effects (Disabled on touch devices via media query) */
 .logo-link:hover {
     opacity: 0.9;
 }
 
 .stylish-heading {
-    font-size: 1.6em;
+    font-size: clamp(1.2em, 4vw, 1.6em); /* Fluid font size */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out, letter-spacing 0.2s ease-in-out;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500; /* Light weight for the logo */
+    font-weight: 500;
     letter-spacing: 0.2em;
     margin-left: 0.2em;
     color: black;
@@ -66,31 +68,35 @@ header {
 
 .tagline {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.6em;
+    font-size: clamp(0.5em, 2vw, 0.6em); /* Fluid font size */
     font-weight: 100;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-top: -0.5em;
     text-align: center;
-    width: 100%;
     color: black;
 }
 
 .stylish-heading:hover {
-    transform: scale(1.05); /* Subtle zoom on hover */
-    letter-spacing: 0.25em; /* Slightly expand letter spacing */
+    transform: scale(1.05);
+    letter-spacing: 0.25em;
 }
 
 /* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 1.5em; /* Reduced gap for mobile */
+    margin: 0;
+    padding: 0;
+    transition: gap 0.3s ease;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: clamp(0.9em, 3vw, 1em); /* Fluid font size */
+    padding: 0.5em; /* Larger tap area for mobile */
 }
 
 nav a:hover {
@@ -106,22 +112,26 @@ nav a:hover {
     border: none;
     cursor: pointer;
     border-radius: 0.5em;
-    font-size: 1.2em;
+    font-size: clamp(1em, 3.5vw, 1.2em); /* Fluid font size */
     margin-top: 1.5em;
-    /* transition: transform 0.3s ease; */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    display: inline-block; /* Ensures proper scaling */
 }
 
-/* .cta-btn:hover {
-    transform: scale(1.1); /* Increases button size to 110% on hover */
-/* } */ */
+.cta-btn:hover {
+    transform: scale(1.05); /* Slightly reduced scale for subtlety */
+    background-color: #005bb5; /* Lighter shade on hover */
+}
 
 /* Main Section */
 main {
     margin-top: 3em;
+    padding: 0 1em; /* Added padding for mobile */
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: clamp(1.8em, 6vw, 2.5em); /* Fluid font size */
+    line-height: 1.2; /* Better readability */
 }
 
 /* Demo Section */
@@ -129,25 +139,38 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2em;
-    padding: 2em;
-    gap: 2em;
+    margin: 2em 1em; /* Adjusted for mobile */
+    padding: 2em 1em;
+    gap: 1.5em; /* Reduced gap */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .demo-text {
     flex: 1;
     text-align: left;
+    min-width: 250px; /* Ensures readability */
+}
+
+.demo-text h2 {
+    font-size: clamp(1.5em, 4vw, 2em); /* Fluid font size */
+}
+
+.demo-text p {
+    font-size: clamp(0.9em, 3vw, 1em);
 }
 
 .demo-video {
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 250px; /* Ensures video doesn’t shrink too much */
 }
 
-.demo-video video {
+.demo-video iframe {
     width: 100%;
-    max-width: 30em; /* Using `em` for responsiveness */
+    max-width: 560px; /* Limits max size */
+    height: auto; /* Maintains aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensures proper video ratio */
     border-radius: 1em;
 }
 
@@ -157,14 +180,13 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 0.75em 0;  /* Reduce vertical padding */
+    padding: 0.75em 0;
     text-align: center;
     color: white;
     background-color: #00133f;
-    height: 2em; /* Explicitly set height */
-    line-height: 2em; /* Center text vertically */
-    /* font-size: 0.9em; Adjust font size if needed */
-    overflow: hidden; /* Ensure no extra spacing */
+    height: 2em;
+    line-height: 2em;
+    font-size: clamp(0.8em, 2.5vw, 0.9em); /* Fluid font size */
 }
 
 /* Button Styles */
@@ -175,26 +197,97 @@ footer {
     border: none;
     cursor: pointer;
     border-radius: 0.3em;
-    font-size: 1rem;
+    font-size: clamp(0.9em, 3vw, 1rem);
+    transition: transform 0.3s ease;
 }
 
-/* Responsive Design */
+.start-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Enhanced Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        text-align: center;
+        padding: 1em; /* Reduced padding */
     }
-    
+
     .logo {
         margin-bottom: 1em;
     }
-    
+
+    .logo img {
+        height: 2.5em; /* Smaller logo on mobile */
+    }
+
+    nav ul {
+        gap: 1em;
+        flex-wrap: wrap; /* Allows nav items to wrap if needed */
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.7em; /* Larger tap area */
+    }
+
+    main {
+        margin-top: 2em;
+    }
+
+    .cta-btn {
+        width: 90%; /* Wider button for mobile */
+        padding: 0.8em 1.5em;
+    }
+
     .demo-section {
         flex-direction: column;
-        padding: 1.5em;
+        padding: 1em;
+        margin: 1em 0.5em;
     }
-    
+
+    .demo-text {
+        text-align: center; /* Centered text for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 2em; /* Even smaller logo */
+    }
+
+    .stylish-heading {
+        letter-spacing: 0.1em; /* Reduced spacing for readability */
+    }
+
+    nav ul {
+        gap: 0.5em;
+    }
+
     .cta-btn {
-        width: 80%;
+        font-size: 1em; /* Fixed size for small screens */
+        padding: 0.7em 1.2em;
+    }
+
+    .demo-video iframe {
+        max-width: 100%; /* Full width on tiny screens */
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    .logo-link:hover,
+    nav a:hover,
+    .cta-btn:hover,
+    .start-btn:hover,
+    .stylish-heading:hover {
+        transform: none; /* No scaling */
+        opacity: 1; /* No opacity change */
+        letter-spacing: inherit; /* No letter spacing change */
+        background-color: inherit; /* No color change */
     }
 }
