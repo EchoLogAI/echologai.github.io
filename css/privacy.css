@@ -1,0 +1,59 @@
+.privacy-container {
+    max-width: 50rem; /* Keeps content readable */
+    margin: 2rem auto; /* Centers content */
+    padding: clamp(1rem, 3vw, 2rem); /* Responsive padding */
+    width: 90%;
+    box-sizing: border-box;
+    background: rgba(0, 19, 63, 0.8); /* Dark theme consistency */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.privacy-container h1 {
+    color: #6beeff;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    margin-bottom: 1rem;
+    text-align: left; /* Left align for better readability */
+}
+
+.privacy-container h2 {
+    color: #00a2ff;
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: left; /* Left align section headings */
+}
+
+.privacy-container p {
+    color: #e0e0e0;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: left; /* Ensures all text is left-aligned */
+}
+
+.privacy-container a {
+    color: #6beeff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.privacy-container a:hover {
+    color: #00a2ff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .privacy-container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-container {
+        padding: 1rem;
+    }
+}

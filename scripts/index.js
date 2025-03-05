@@ -78,3 +78,60 @@ function onClickPost(id) {
 }
 
 
+// Function to handle the loading of Privacy Policy
+function loadPrivacyPolicy() {
+    const mainContent = document.querySelector("main");
+
+    // Replace main content with the Privacy Policy section
+    mainContent.innerHTML = `
+    <div class="privacy-container">
+        <h1>Privacy Policy for Chrome Extension: EchoLog AI Voice Assistant</h1>
+
+        <p><strong>Last Updated: March 5, 2025</strong></p>
+
+        <section>
+            <h2>1. Introduction</h2>
+            <p>EchoLog AI Voice Assistant Chrome Extension is committed to protecting your privacy. This Privacy Policy explains how our extension handles data, ensuring transparency and security for all users.</p>
+        </section>
+
+        <section>
+            <h2>2. Data Collection</h2>
+            <p>We do not collect, store, or share any personal or sensitive user data. EchoLog operates primarily on your local device, and no data is transmitted to external servers unless explicitly required for intent understanding. For this purpose, we use Gemini APIs, which are large language models (LLMs) that help us process and understand voice commands. However, these APIs do not store or retain any personal data; they only process the data locally and are used solely to enhance the functionality of the voice assistant.</p>
+        </section>
+
+        <section>
+            <h2>3. Permissions</h2>
+            <p>The Chrome extension requests microphone access solely for processing voice commands locally. The voice data is sent to Gemini APIs for intent understanding via "gemini-2.0-flash". No voice data is recorded, stored, or shared with any third party, and the data is processed temporarily to ensure accurate responses to your commands.</p>
+        </section>
+
+        <section>
+            <h2>4. Third-Party Services</h2>
+            <p>EchoLog does not use third-party tracking, analytics, or data-sharing services. Your activity within the extension remains private.</p>
+        </section>
+
+        <section>
+            <h2>5. Updates to This Policy</h2>
+            <p>We may update this Privacy Policy periodically. Any changes will be reflected on this page, and we encourage users to review the policy from time to time.</p>
+        </section>
+
+        <section>
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at <a href="mailto:[echolog07@gmail.com]">echolog07@gmail.com</a>.</p>
+        </section>
+    </div>
+    <div style="height: 4em;"></div>
+    `;
+
+    // Remove the demo section if it exists
+    const demoSection = document.querySelector(".demo-section");
+    if (demoSection) {
+        demoSection.remove();
+    }
+}
+
+// Event listener for the Privacy button
+document.getElementById("privacy-btn").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    loadPrivacyPolicy();
+});
+
