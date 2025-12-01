@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="blueSphereGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#4dd0e1" /> <stop offset="50%" style="stop-color:#0288d1" /> <stop offset="100%" style="stop-color:#01579b" /> </radialGradient>
+  </defs>
+  
+  <g transform="translate(128, 128)" fill="url(#blueSphereGradient)">
+    
+    <g id="ring1">
+      <circle r="5" transform="translate(0, -35)"/>
+      <circle r="5" transform="rotate(36) translate(0, -35)"/>
+      <circle r="5" transform="rotate(72) translate(0, -35)"/>
+      <circle r="5" transform="rotate(108) translate(0, -35)"/>
+      <circle r="5" transform="rotate(144) translate(0, -35)"/>
+      <circle r="5" transform="rotate(180) translate(0, -35)"/>
+      <circle r="5" transform="rotate(216) translate(0, -35)"/>
+      <circle r="5" transform="rotate(252) translate(0, -35)"/>
+      <circle r="5" transform="rotate(288) translate(0, -35)"/>
+      <circle r="5" transform="rotate(324) translate(0, -35)"/>
+    </g>
+
+    <g id="ring2" transform="rotate(18)">
+      <circle r="7" transform="translate(0, -60)"/>
+      <circle r="7" transform="rotate(36) translate(0, -60)"/>
+      <circle r="7" transform="rotate(72) translate(0, -60)"/>
+      <circle r="7" transform="rotate(108) translate(0, -60)"/>
+      <circle r="7" transform="rotate(144) translate(0, -60)"/>
+      <circle r="7" transform="rotate(180) translate(0, -60)"/>
+      <circle r="7" transform="rotate(216) translate(0, -60)"/>
+      <circle r="7" transform="rotate(252) translate(0, -60)"/>
+      <circle r="7" transform="rotate(288) translate(0, -60)"/>
+      <circle r="7" transform="rotate(324) translate(0, -60)"/>
+    </g>
+
+     <g id="ring3">
+      <circle r="9.5" transform="translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(36) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(72) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(108) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(144) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(180) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(216) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(252) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(288) translate(0, -88)"/>
+      <circle r="9.5" transform="rotate(324) translate(0, -88)"/>
+    </g>
+    
+    <g id="ring4">
+      <circle r="11" transform="translate(0, -118)"/>
+      <circle r="11" transform="rotate(18) translate(0, -118)"/>
+      <circle r="11" transform="rotate(36) translate(0, -118)"/>
+      <circle r="11" transform="rotate(54) translate(0, -118)"/>
+      <circle r="11" transform="rotate(72) translate(0, -118)"/>
+      <circle r="11" transform="rotate(90) translate(0, -118)"/>
+      <circle r="11" transform="rotate(108) translate(0, -118)"/>
+      <circle r="11" transform="rotate(126) translate(0, -118)"/>
+      <circle r="11" transform="rotate(144) translate(0, -118)"/>
+      <circle r="11" transform="rotate(162) translate(0, -118)"/>
+      <circle r="11" transform="rotate(180) translate(0, -118)"/>
+      <circle r="11" transform="rotate(198) translate(0, -118)"/>
+      <circle r="11" transform="rotate(216) translate(0, -118)"/>
+      <circle r="11" transform="rotate(234) translate(0, -118)"/>
+      <circle r="11" transform="rotate(252) translate(0, -118)"/>
+      <circle r="11" transform="rotate(270) translate(0, -118)"/>
+      <circle r="11" transform="rotate(288) translate(0, -118)"/>
+      <circle r="11" transform="rotate(306) translate(0, -118)"/>
+      <circle r="11" transform="rotate(324) translate(0, -118)"/>
+      <circle r="11" transform="rotate(342) translate(0, -118)"/>
+    </g>
+  </g>
+</svg>
