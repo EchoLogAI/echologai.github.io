@@ -47,9 +47,9 @@
         <nav role="navigation" aria-label="Main navigation">
             <ul role="list">
                 <li><a href="https://docs.google.com/forms/d/1xGM23sPcsnR1dacpO5xvU-XErgakMFAjovcVl9fU_A0/viewform" target="_blank" aria-label="Sign up for EchoLog Premium Early Access (opens in new tab)">Try Premium</a></li>
-                <li><a href="#" id="blogs-btn" aria-label="View EchoLog Blogs">Blogs</a></li>
+                <li><a href="/blog/" aria-label="View EchoLog Blogs">Blogs</a></li>
                 <li><a href="https://calendly.com/snehamaheshwari07/meeting-with-echolog-team" target="_blank" aria-label="Contact EchoLog Team (opens in new tab)">Contact Us</a></li>
-                <li><a href="#" id="privacy-btn" aria-label="View Privacy Policy">Privacy</a></li>
+                <li><a href="/privacy/" id="privacy-btn" aria-label="View Privacy Policy">Privacy</a></li>
             </ul>
         </nav>
     </header>
@@ -69,8 +69,6 @@
         </div>
         <div class="demo-video">
             <iframe 
-                width="560" 
-                height="315" 
                 src="https://www.youtube.com/embed/u4k68_HzLKM" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
@@ -80,15 +78,70 @@
             </iframe>
         </div>
     </section>
-   
+
+    <section class="features-section" aria-labelledby="features-heading">
+        <div class="features-header">
+            <h2 id="features-heading">Why Choose EchoLog?</h2>
+            <p class="section-intro">EchoLog bridges the gap between physical limitations and digital freedom. Experience a true hands-free environment.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8cd3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+                <h3>Advanced Voice AI</h3>
+                <p>Powered by Gemini 2.0 Flash. Speak naturally to scroll, click, or type without memorizing robotic commands.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8cd3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"></circle><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path></svg>
+                </div>
+                <h3>Accessibility First</h3>
+                <p>Built for motor disabilities and RSI. Control your digital environment completely hands-free without physical strain.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8cd3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>Privacy by Design</h3>
+                <p>Your voice data is processed securely for intent only and never stored. You maintain full control over your data.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8cd3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <h3>Chrome Integration</h3>
+                <p>Works directly within your browser workflow. Manage tabs, forms, and navigation without lifting a finger.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ecosystem-section">
+        <div class="ecosystem-container">
+            <div class="ecosystem-text">
+                <h3>More from EchoLog</h3>
+                <p>We build tools to simplify your digital life. Check out our free utility for developers.</p>
+            </div>
+            <a href="https://jsonformatter.echologai.com" target="_blank" class="tool-card" aria-label="Open JSON Formatter Tool">
+                <div class="tool-info">
+                    <span class="badge">Free Tool</span>
+                    <h4>JSON Formatter</h4>
+                    <p>Validate, format, and beautify your JSON data instantly.</p>
+                </div>
+                <div class="arrow-icon">→</div>
+            </a>
+        </div>
+    </section>
     <footer role="contentinfo">
         <p style="margin-top: -0.12em;">
             © 2025 Echolog Team. All rights reserved.
         </p>
     </footer>
 
-    <script src="blog-data/posts.js"></script>
-    <script src="scripts/blog.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>

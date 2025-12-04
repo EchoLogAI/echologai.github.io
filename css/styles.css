@@ -9,8 +9,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-size: 1rem;
-    min-height: 100vh; /* Ensures body takes full viewport height */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -18,10 +18,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em; /* Increased padding for touch targets */
+    padding: 1em 2em;
     width: 100%;
     box-sizing: border-box;
-    transition: padding 0.3s ease; /* Smooth padding transition */
+    transition: padding 0.3s ease;
 }
 
 /* Logo Section */
@@ -32,8 +32,8 @@ header {
 
 .logo img {
     height: 3em;
-    margin-right: 1em; /* Reduced for smaller screens */
-    transition: height 0.3s ease; /* Smooth resize */
+    margin-right: 1em;
+    transition: height 0.3s ease;
 }
 
 .logo-text {
@@ -50,13 +50,12 @@ header {
     color: inherit;
 }
 
-/* Hover Effects (Disabled on touch devices via media query) */
 .logo-link:hover {
     opacity: 0.9;
 }
 
 .stylish-heading {
-    font-size: clamp(1.2em, 4vw, 1.6em); /* Fluid font size */
+    font-size: clamp(1.2em, 4vw, 1.6em);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out, letter-spacing 0.2s ease-in-out;
     font-family: 'Roboto', sans-serif;
@@ -68,7 +67,7 @@ header {
 
 .tagline {
     font-family: 'Roboto', sans-serif;
-    font-size: clamp(0.5em, 2vw, 0.6em); /* Fluid font size */
+    font-size: clamp(0.5em, 2vw, 0.6em);
     font-weight: 100;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -86,7 +85,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5em; /* Reduced gap for mobile */
+    gap: 1.5em;
     margin: 0;
     padding: 0;
     transition: gap 0.3s ease;
@@ -95,8 +94,8 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: clamp(0.9em, 3vw, 1em); /* Fluid font size */
-    padding: 0.5em; /* Larger tap area for mobile */
+    font-size: clamp(0.9em, 3vw, 1em);
+    padding: 0.5em;
 }
 
 nav a:hover {
@@ -112,26 +111,26 @@ nav a:hover {
     border: none;
     cursor: pointer;
     border-radius: 0.5em;
-    font-size: clamp(1em, 3.5vw, 1.2em); /* Fluid font size */
+    font-size: clamp(1em, 3.5vw, 1.2em);
     margin-top: 1.5em;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-    display: inline-block; /* Ensures proper scaling */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
 }
 
 .cta-btn:hover {
-    transform: scale(1.05); /* Slightly reduced scale for subtlety */
-    background-color: #005bb5; /* Lighter shade on hover */
+    transform: scale(1.05);
+    background-color: #005bb5;
 }
 
 /* Main Section */
 main {
     margin-top: 3em;
-    padding: 0 1em; /* Added padding for mobile */
+    padding: 0 1em;
 }
 
 h1 {
-    font-size: clamp(1.8em, 6vw, 2.5em); /* Fluid font size */
-    line-height: 1.2; /* Better readability */
+    font-size: clamp(1.8em, 6vw, 2.5em);
+    line-height: 1.2;
 }
 
 /* Demo Section */
@@ -139,77 +138,238 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2em 1em; /* Adjusted for mobile */
-    padding: 2em 1em;
-    gap: 1.5em; /* Reduced gap */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 4em auto; /* Increased margin for spacing */
+    padding: 2em;
+    gap: 3em;
+    max-width: 1200px; /* Limits width on large screens */
+    flex-wrap: wrap;
 }
 
 .demo-text {
     flex: 1;
     text-align: left;
-    min-width: 250px; /* Ensures readability */
+    min-width: 300px;
 }
 
 .demo-text h2 {
-    font-size: clamp(1.5em, 4vw, 2em); /* Fluid font size */
+    font-size: clamp(1.5em, 4vw, 2.5em);
+    margin-top: 0;
 }
 
 .demo-text p {
-    font-size: clamp(0.9em, 3vw, 1em);
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 .demo-video {
     flex: 1;
     display: flex;
     justify-content: center;
-    min-width: 250px; /* Ensures video doesn’t shrink too much */
+    min-width: 300px;
 }
 
 .demo-video iframe {
     width: 100%;
-    max-width: 560px; /* Limits max size */
-    height: auto; /* Maintains aspect ratio */
-    aspect-ratio: 16 / 9; /* Ensures proper video ratio */
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 1em;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Added shadow for depth */
+}
+
+/* =========================================
+   UPDATED FEATURES SECTION 
+   ========================================= */
+.features-section {
+    padding: 6em 1.5em; /* More breathing room */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.features-header h2 {
+    font-size: clamp(2.2em, 5vw, 3em);
+    margin-bottom: 0.2em;
+    background: linear-gradient(to right, #fff, #8cd3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+}
+
+.section-intro {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5em;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05); /* Darker glass for better contrast */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Key: Left aligns content inside card */
+    text-align: left;
+    height: 100%; /* Ensures equal height */
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #8cd3ff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
+}
+
+/* Icon Styling */
+.icon-wrapper {
+    background: rgba(0, 72, 145, 0.5);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* =========================================
+   NEW ECOSYSTEM SECTION (JSON Formatter)
+   ========================================= */
+.ecosystem-section {
+    max-width: 900px;
+    margin: 2em auto 6em auto; /* Spacing below features */
+    padding: 0 1.5em;
+}
+
+.ecosystem-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2em;
+    border-radius: 1em;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.ecosystem-text {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.ecosystem-text h3 {
+    font-size: 1.5em;
+    margin: 0 0 0.5em 0;
+}
+
+.ecosystem-text p {
+    margin: 0;
+    color: rgba(255,255,255,0.7);
+}
+
+.tool-card {
+    flex: 1;
+    min-width: 280px;
+    background: #00133f;
+    padding: 1.5em;
+    border-radius: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    border: 1px solid rgba(140, 211, 255, 0.3);
+    transition: transform 0.2s;
+}
+
+.tool-card:hover {
+    transform: scale(1.02);
+    border-color: #8cd3ff;
+}
+
+.tool-info h4 {
+    margin: 0.5em 0 0.2em 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+.tool-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.badge {
+    background: #8cd3ff;
+    color: #00133f;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.arrow-icon {
+    font-size: 1.5em;
+    color: #8cd3ff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .ecosystem-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ecosystem-text {
+        text-align: center;
+    }
 }
 
 /* Footer Styling */
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 0.75em 0;
+    position: relative; /* Changed from fixed to flow naturally */
+    margin-top: 4em;
+    padding: 2em 0;
     text-align: center;
-    color: white;
-    background-color: #00133f;
-    height: 2em;
-    line-height: 2em;
-    font-size: clamp(0.8em, 2.5vw, 0.9em); /* Fluid font size */
-}
-
-/* Button Styles */
-.start-btn {
-    background-color: green;
-    color: white;
-    padding: 0.8em 1.2em;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.3em;
-    font-size: clamp(0.9em, 3vw, 1rem);
-    transition: transform 0.3s ease;
-}
-
-.start-btn:hover {
-    transform: scale(1.05);
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(0, 19, 63, 0.8);
+    font-size: 0.9em;
 }
 
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 1em; /* Reduced padding */
+        padding: 1em;
     }
 
     .logo {
@@ -217,77 +377,40 @@ footer {
     }
 
     .logo img {
-        height: 2.5em; /* Smaller logo on mobile */
+        height: 2.5em;
     }
 
     nav ul {
         gap: 1em;
-        flex-wrap: wrap; /* Allows nav items to wrap if needed */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
-    nav a {
-        padding: 0.7em; /* Larger tap area */
-    }
-
-    main {
-        margin-top: 2em;
-    }
-
-    .cta-btn {
-        width: 90%; /* Wider button for mobile */
-        padding: 0.8em 1.5em;
-    }
-
     .demo-section {
-        flex-direction: column;
-        padding: 1em;
-        margin: 1em 0.5em;
+        flex-direction: column-reverse; /* Put text above video on mobile? or Keep standard */
+        margin: 2em 1em;
+        gap: 2em;
     }
 
     .demo-text {
-        text-align: center; /* Centered text for mobile */
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    .logo img {
-        height: 2em; /* Even smaller logo */
-    }
-
-    .stylish-heading {
-        letter-spacing: 0.1em; /* Reduced spacing for readability */
-    }
-
-    nav ul {
-        gap: 0.5em;
-    }
-
     .cta-btn {
-        font-size: 1em; /* Fixed size for small screens */
-        padding: 0.7em 1.2em;
+        width: 100%;
+        box-sizing: border-box;
     }
-
-    .demo-video iframe {
-        max-width: 100%; /* Full width on tiny screens */
+    
+    .features-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
     }
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
 }
 
 /* Disable hover effects on touch devices */
 @media (hover: none) {
-    .logo-link:hover,
-    nav a:hover,
-    .cta-btn:hover,
-    .start-btn:hover,
-    .stylish-heading:hover {
-        transform: none; /* No scaling */
-        opacity: 1; /* No opacity change */
-        letter-spacing: inherit; /* No letter spacing change */
-        background-color: inherit; /* No color change */
+    .feature-card:hover {
+        transform: none;
     }
 }

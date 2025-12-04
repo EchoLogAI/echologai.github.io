@@ -8,26 +8,28 @@ body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+/* Update these two classes in css/blog.css */
+
 .blog-container {
-    max-width: 50rem; /* Keeps content readable */
+    max-width: 80rem; /* Increased from 50rem to make it wider */
     margin: 0 auto;
-    padding: clamp(1rem, 3vw, 2rem); /* Fluid padding */
-    width: 90%; /* Ensures flexibility on smaller screens */
-    box-sizing: border-box; /* Includes padding in width */
+    padding: clamp(1rem, 3vw, 2rem);
+    width: 90%;
+    box-sizing: border-box;
 }
 
 .blog-post {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: clamp(0.75rem, 2vw, 1rem); /* Fluid padding */
-    margin: 0 0 3rem 0; /* Simplified margin, removed redundant left/right */
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.15); /* Slightly stronger shadow for depth */
-    background-color: rgba(0, 19, 63, 0.8); /* Subtle dark overlay for contrast */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    margin-left: 15rem; /* Added margin to align with sidebar */
-    margin-right: 15rem; /* Added margin to align with sidebar */
+    padding: clamp(1.5rem, 2.5vw, 2rem); /* Increased padding for breathing room */
+    margin: 0 0 2rem 0; /* REMOVED the 15rem left/right margins here */
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    background-color: rgba(0, 19, 63, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure it fills the container */
+    box-sizing: border-box; 
 }
 
 /* Hover effect for interactivity */
