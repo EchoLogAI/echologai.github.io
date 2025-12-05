@@ -1,5 +1,5 @@
 .privacy-container {
-    max-width: 50rem; /* Keeps content readable */
+    max-width: 65rem; /* Keeps content readable */
     margin: 2rem auto; /* Centers content */
     padding: clamp(1rem, 3vw, 2rem); /* Responsive padding */
     width: 90%;
