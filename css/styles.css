@@ -386,6 +386,19 @@ footer {
         justify-content: center;
     }
 
+    .features-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em; /* Maintain the gap */
+    }
+
+    /* Reset height to allow cards to grow with content naturally */
+    .feature-card {
+        height: auto; 
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
+    
     .demo-section {
         flex-direction: column-reverse; /* Put text above video on mobile? or Keep standard */
         margin: 2em 1em;

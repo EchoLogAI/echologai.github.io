@@ -1,25 +1,25 @@
 
-document.getElementById("blogs-btn").addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
+// document.getElementById("blogs-btn").addEventListener("click", function (event) {
+//     event.preventDefault(); // Prevent default link behavior
 
-    // Get the main content area
-    const mainContent = document.querySelector("main");
+//     // Get the main content area
+//     const mainContent = document.querySelector("main");
 
-    // Replace main content with the blog section
-    mainContent.innerHTML = `
-        <h3>EchoLog Blogs</h3>
-        <div id="blog-list"></div>
-    `;
+//     // Replace main content with the blog section
+//     mainContent.innerHTML = `
+//         <h3>EchoLog Blogs</h3>
+//         <div id="blog-list"></div>
+//     `;
 
-    // Remove the demo section if it exists
-    const demoSection = document.querySelector(".demo-section");
-    if (demoSection) {
-        demoSection.remove();
-    }
+//     // Remove the demo section if it exists
+//     const demoSection = document.querySelector(".demo-section");
+//     if (demoSection) {
+//         demoSection.remove();
+//     }
 
-    // Fetch and display blog posts after switching to the blog section
-    fetchBlogPosts();
-});
+//     // Fetch and display blog posts after switching to the blog section
+//     fetchBlogPosts();
+// });
 
 function fetchBlogPosts() {
     console.log("Loading blog posts...");
@@ -130,8 +130,8 @@ function loadPrivacyPolicy() {
 }
 
 // Event listener for the Privacy button
-document.getElementById("privacy-btn").addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    loadPrivacyPolicy();
-});
+// document.getElementById("privacy-btn").addEventListener("click", function (event) {
+//     event.preventDefault(); // Prevent default link behavior
+//     loadPrivacyPolicy();
+// });
 
