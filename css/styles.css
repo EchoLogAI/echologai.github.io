@@ -344,13 +344,55 @@ h1 {
 }
 
 /* Mobile Adjustments */
+/* Update this specific block in your media queries */
 @media (max-width: 768px) {
     .ecosystem-container {
         flex-direction: column;
         text-align: center;
+        /* FIX 1: Reduce container padding to give the card more room */
+        padding: 1.5em; 
     }
+
     .ecosystem-text {
         text-align: center;
+        /* Ensure text doesn't overflow */
+        width: 100%; 
+    }
+
+    .tool-card {
+        /* FIX 2: Remove the rigid min-width on mobile */
+        min-width: 0; 
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is calculated inside width */
+        
+        /* FIX 3: Ensure the card stays a row (icon next to text) */
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .tool-info {
+        /* Keep text left-aligned inside the card for readability */
+        text-align: left;
+        /* Ensure text takes available space but doesn't push arrow out */
+        flex: 1; 
+        padding-right: 10px; /* Add breathing room between text and arrow */
+    }
+
+    .arrow-icon {
+        /* FIX 4: Prevent the arrow from being squashed or pushed out */
+        flex-shrink: 0; 
+    }
+}
+
+/* Add this for very small screens (iPhone SE, etc.) */
+@media (max-width: 400px) {
+    .ecosystem-container {
+        padding: 1em; /* Maximize screen real estate */
+    }
+
+    .tool-card {
+        padding: 1em; /* Reduce internal card padding */
     }
 }
 
