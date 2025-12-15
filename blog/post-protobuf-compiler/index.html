@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing Proto Workbench: Online Protobuf Compiler & Decoder | EchoLog Blog</title>
+    <meta name="description" content="Learn how Proto Workbench helps developers compile JSON into Protobuf binary and decode Hex/Base64 into JSON directly in the browser, with full client-side privacy.">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="logo"> 
+            <a href="/" class="logo-link" aria-label="EchoLog Home">
+                <img src="/assets/EchoLog-Logo.png" alt="EchoLog Logo" style="border-radius:1em; width: 4em; height: 4em;">
+                <div class="logo-text">
+                    <h1 class="stylish-heading">ECHOLOG</h1>
+                    <p class="tagline">TRANSFORMING ACCESSIBILITY</p>
+                </div>
+            </a>
+        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul role="list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blogs</a></li>
+                <li><a href="/privacy/">Privacy</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="mailto:echolog07@gmail.com">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="blog-post-container">
+        <div class="blog-header" role="banner">
+            <span class="blog-category">Developer Tools</span>
+            <h1>Proto Workbench: Online Protobuf Compiler &amp; Decoder</h1>
+            <p class="blog-meta">Kshitij • Dec 10, 2025 • 5 minutes read</p>
+        </div>
+
+        <article class="blog-content" role="article">
+            <div class="blog-image">
+                <img src="/assets/blog-images/logo512.png" alt="Proto Workbench Protobuf Tool" style="object-fit: contain;">
+            </div>
+
+            <h2>Online Protobuf Compiler and Decoder in Your Browser</h2>
+            <p>
+                Protocol Buffers are incredibly efficient for data exchange, but they are not the most friendly format when you are 
+                trying to debug a gRPC request, inspect a binary payload, or iterate on a complex <code>.proto</code> schema. 
+                <strong>Proto Workbench</strong> is our answer to that problem: an advanced, browser-based Protobuf playground that lets you move
+                seamlessly between human-readable JSON and compact binary formats.
+            </p>
+
+            <p>
+                Whether you are working with <strong>gRPC debugging</strong>, reverse engineering a stream of bytes, or validating a new schema, 
+                Proto Workbench gives you a dedicated workspace to compile and decode data instantly—without installing extra CLI tools or 
+                booting up a full backend environment.
+            </p>
+
+            <h2>A Workspace for Both Encoding and Decoding</h2>
+            <p>
+                Proto Workbench is designed around two primary workflows:
+            </p>
+            <ul>
+                <li><strong>Online Protobuf Compiler: JSON to Binary Converter</strong> – Paste your JSON payload, select a message type, and compile it into a Protobuf binary representation in Hex or Base64.</li>
+                <li><strong>Online Protobuf Decoder: Binary to JSON Parser</strong> – Paste your Hex or Base64 string, choose the schema, and instantly view a clean, structured JSON object.</li>
+            </ul>
+            <p>
+                Behind the scenes, the same schema powers both directions, so you can trust that the decoded output matches exactly what your 
+                services expect in production.
+            </p>
+
+            <h2>Key Features Built for Real Debugging</h2>
+            <p>
+                Proto Workbench aims to feel more like a code editor than a toy demo. The goal is to help you stay in flow during long debugging sessions.
+            </p>
+            <ul>
+                <li><strong>Smart Schema Editor:</strong> A full-featured editor with line numbers, syntax highlighting, and <strong>Find &amp; Replace</strong> (including Regex support) so you can navigate large <code>.proto</code> files efficiently.</li>
+                <li><strong>Auto-Generation:</strong> Automatically generate empty <strong>JSON templates</strong> or <strong>Hex strings</strong> based on your selected message type, so you start from a valid structure instead of a blank page.</li>
+                <li><strong>Deep Linking:</strong> Dedicated entry points for the two main flows—JSON to Binary and Binary to JSON—so you can bookmark the exact workflow you use most often.</li>
+            </ul>
+
+            <h2>Privacy and Performance by Design</h2>
+            <p>
+                Just like our JSON Formatter, Proto Workbench is built with privacy and security at the core. 
+                Many Protobuf payloads include internal data, user identifiers, or business logic details that you cannot safely paste into
+                random online tools.
+            </p>
+            <ul>
+                <li><strong>Client-Side Only:</strong> Powered by <code>protobuf.js</code>, all compilation and decoding happens locally in your browser. Your schemas and data never leave your machine.</li>
+                <li><strong>Flexible Format Support:</strong> Paste Hexadecimal input (with or without spaces) or Base64 strings—the tool normalizes and parses them for you.</li>
+                <li><strong>Real-Time Validation:</strong> Syntax errors in your <code>.proto</code> schema or JSON input are surfaced immediately, so you can correct issues before sending data anywhere else.</li>
+            </ul>
+
+            <h2>Frequently Asked Workflow Questions</h2>
+
+            <h3>How do I use the Find &amp; Replace feature?</h3>
+            <p>
+                Inside the schema or data editors, press <code>Ctrl+F</code> (or <code>Cmd+F</code> on Mac) to open the search bar. 
+                You can search for message names, field identifiers, or specific values. Press <code>Enter</code> to jump through matches, 
+                and combine this with Regex mode when you need more powerful queries.
+            </p>
+
+            <h3>Why are JSON templates auto-generated?</h3>
+            <p>
+                When you select a <code>Message</code> type from the dropdown, Proto Workbench scans your <code>.proto</code> schema and 
+                constructs a valid JSON object (or binary equivalent) with sensible default values. This removes a lot of boilerplate and 
+                helps you focus on the fields that actually matter instead of reconstructing nested structures by hand.
+            </p>
+
+            <h3>Does Proto Workbench support nested messages?</h3>
+            <p>
+                Yes. The recursive generator understands nested <code>message</code> types, <code>repeated</code> fields (arrays), and 
+                <code>map</code> fields. Even deeply nested structures are expanded into a JSON template that you can edit, collapse, or reuse across tests.
+            </p>
+
+            <p>
+                Proto Workbench is still evolving, and we are actively collecting feedback from developers who work with gRPC and Protocol Buffers daily.
+                If you have ideas, feature requests, or real-world problems we can help solve, we would love to hear from you.
+            </p>
+        </article>
+    </div>
+
+    <footer role="contentinfo">
+        <p>© 2025 Echolog Team. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
