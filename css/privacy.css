@@ -8,6 +8,7 @@
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.15);
     color: white;
+    text-align: left !important; /* Force left alignment, overriding global body centering */
 }
 
 .privacy-container h1 {
@@ -30,7 +31,18 @@
     font-size: clamp(0.95rem, 2vw, 1.1rem);
     line-height: 1.5;
     margin-bottom: 1rem;
-    text-align: left; /* Ensures all text is left-aligned */
+    text-align: left !important; /* Ensures paragraph text is left-aligned */
+}
+
+.privacy-container ul {
+    padding-left: 1.5rem; /* Indent lists for readability */
+    margin-bottom: 1rem;
+    text-align: left !important;
+}
+
+.privacy-container li {
+    margin-bottom: 0.4rem;
+    text-align: left !important; /* Prevent list items from inheriting centered body text */
 }
 
 .privacy-container a {
