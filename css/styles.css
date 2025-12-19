@@ -281,6 +281,14 @@ h1 {
     gap: 2em;
 }
 
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+    flex: 1;
+    width: 100%;
+}
+
 .ecosystem-text {
     flex: 1;
     min-width: 280px;
@@ -351,6 +359,10 @@ h1 {
         text-align: center;
         /* FIX 1: Reduce container padding to give the card more room */
         padding: 1.5em; 
+    }
+
+    .tool-grid {
+        width: 100%;
     }
 
     .ecosystem-text {
