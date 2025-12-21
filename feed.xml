@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>EchoLog Blog</title>
+    <link>https://echologai.com/blog/</link>
+    <description>Latest updates and insights from EchoLog about digital accessibility, voice assistants, and hands-free computing.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://echologai.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://echologai.com/assets/EchoLog-Logo.png</url>
+      <title>EchoLog Blog</title>
+      <link>https://echologai.com/blog/</link>
+    </image>
+    
+    <item>
+      <title>Proto Workbench: Online Protobuf Compiler &amp; Decoder</title>
+      <link>https://echologai.com/blog/post-protobuf-compiler/</link>
+      <guid isPermaLink="true">https://echologai.com/blog/post-protobuf-compiler/</guid>
+      <description>Discover how Proto Workbench helps you compile JSON into Protobuf binary, decode Hex/Base64 into JSON, and debug gRPC payloads directly in the browser.</description>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <author>echolog07@gmail.com (Kshitij)</author>
+      <category>Developer Tools</category>
+    </item>
+    
+    <item>
+      <title>Why We Built the EchoLog JSON Formatter</title>
+      <link>https://echologai.com/blog/post-json-formatter/</link>
+      <guid isPermaLink="true">https://echologai.com/blog/post-json-formatter/</guid>
+      <description>Learn how the EchoLog JSON Formatter helps developers securely format, validate, and debug JSON data entirely in the browser, with no data ever leaving your device.</description>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <author>echolog07@gmail.com (Kshitij)</author>
+      <category>Developer Tools</category>
+    </item>
+    
+    <item>
+      <title>Enhancing Digital Accessibility: The Vision Behind EchoLog</title>
+      <link>https://echologai.com/blog/post-accessibility/</link>
+      <guid isPermaLink="true">https://echologai.com/blog/post-accessibility/</guid>
+      <description>EchoLog empowers users with visual and locomotive disabilities through intuitive voice-based navigation.</description>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <author>echolog07@gmail.com (Sneha Maheshwari)</author>
+      <category>Accessibility</category>
+    </item>
+    
+    <item>
+      <title>The Future of Hands-Free Computing</title>
+      <link>https://echologai.com/blog/post-hands-free/</link>
+      <guid isPermaLink="true">https://echologai.com/blog/post-hands-free/</guid>
+      <description>Explore the rise of voice-assisted technology, gaze tracking, and gesture recognition in the future of computing.</description>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <author>echolog07@gmail.com (Sneha Maheshwari)</author>
+      <category>Technology</category>
+    </item>
+  </channel>
+</rss>
+

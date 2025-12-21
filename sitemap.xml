@@ -27,6 +27,12 @@
   <url>
     <loc>https://echologai.com/terms/</loc>
   </url>
+  <url>
+    <loc>https://jsonformatter.echologai.com/</loc>
+  </url>
+  <url>
+    <loc>https://protobuf.echologai.com/</loc>
+  </url>
 </urlset>
 
 
