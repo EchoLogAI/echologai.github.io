@@ -1,5 +1,12 @@
 const blogPosts = [
     {
+        "title": "Introducing EchologAI Tech Reviews: AI-Powered Product Analysis",
+        "date": "December 29, 2025",
+        "image": "assets/blog-images/logo512.png",
+        "excerpt": "Discover how EchologAI Tech Reviews uses AI to deliver comprehensive, data-driven tech product reviews with expert analysis, metrics, and detailed insights.",
+        "url": "/blog/post-techreviews/"
+    },
+    {
         "title": "Proto Workbench: Online Protobuf Compiler & Decoder",
         "date": "December 10, 2025",
         "image": "assets/blog-images/logo512.png",
